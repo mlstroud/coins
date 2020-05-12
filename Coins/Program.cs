@@ -8,16 +8,19 @@ namespace Coins
     public static void Main()
     {
       PromptUser();
+      double change = GetChange();
+      Coin.MakeChange();
+
+      Console.WriteLine(change + " can be broken down into " + Coin.Quarters + " quarters, " + Coin.Dimes + " dimes, " + Coin.Nickels + " nickels, and " + Coin.Pennies + " pennies.");
     }
 
     public static void PromptUser()
     {
       Console.WriteLine("Enter an amount in change to see the breakdown:");
       Console.WriteLine("-----------------------------------------------");
-      GetChange();
     }
 
-    public static void GetChange()
+    public static double GetChange()
     {
       bool parsed = false;
 
@@ -32,9 +35,10 @@ namespace Coins
         else
         {
           Console.WriteLine("Sorry, invalid input. Try again:");
-
         }
       }
+
+      return Coin.Change;
     }
   }
 }

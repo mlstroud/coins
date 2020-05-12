@@ -9,13 +9,22 @@ namespace Coins.Models
     public static int Nickels { get; set; }
     public static int Pennies { get; set; }
 
+    public static void MakeChange()
+    {
+      Quarters = GetQuarters();
+      Dimes = GetDimes();
+      Nickels = GetNickels();
+      Pennies = GetPennies();
+    }
+
     public static int GetQuarters()
     {
       int quarters = 0;
-      while (Change >= .25)
+
+      while (Change >= 0.25)
       {
         quarters++;
-        Change -= .25;
+        Change -= 0.25;
       }
 
       return quarters;
@@ -25,10 +34,10 @@ namespace Coins.Models
     {
       int dimes = 0;
 
-      while (Change >= .10)
+      while (Change >= 0.10)
       {
         dimes++;
-        Change -= .1;
+        Change -= 0.1;
       }
 
       return dimes;
@@ -38,9 +47,8 @@ namespace Coins.Models
     {
       int nickels = 0;
 
-      while (Change >= 0.050)
+      while (Change >= 0.05)
       {
-        Console.WriteLine(Change);
         nickels++;
         Change -= 0.05;
       }
@@ -52,7 +60,7 @@ namespace Coins.Models
     {
       int pennies = 0;
 
-      while (Change > 0)
+      while (Change >= 0.01)
       {
         pennies++;
         Change -= 0.01;
