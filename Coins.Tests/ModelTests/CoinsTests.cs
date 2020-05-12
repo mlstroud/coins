@@ -40,5 +40,17 @@ namespace Coins.Tests
 
       Assert.AreEqual(dimes, result);
     }
+
+    [TestMethod]
+    public void GetNickels_ReturnsNumberOfNickels_Int()
+    {
+      double change = .15;
+      Coin.Change = change;
+      int nickels = 3;
+
+      int result = Coin.GetNickels();
+
+      Assert.AreEqual(nickels, result);
+    }
   }
 }
