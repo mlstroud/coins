@@ -10,6 +10,14 @@ _An Epicodus individual project using C# and MSTest. This project prioritizes un
 _The application will take a given amount of change and return the smallest combination of coins to make that change._
 
 ## Specs
+| Behavior                                                                    | Input | Output        |
+|:----------------------------------------------------------------------------|:-----:|--------------:|
+| Program will store change amount input from user.                           | 0.97  | Change = 0.97 |
+| Program will count quarters by seeing how many times it can subtract 0.25   | 0.97  | 3             |
+| Program will count dimes by seeing how many times it can subtract 0.1       | 0.41  | 4             |
+| Program will count nickels by seeing how many times it can subtract 0.05    | 0.25  | 5             |
+| Program will count pennies by seeing how many times it can subtract 0.01    | 0.06  | 6             |
+| Program will subtract all coin values one after another until 0 is reached. | 0.71  | 2Q, 2D, 1P    |
 
 ## Setup/Installation Requirements
 
