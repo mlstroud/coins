@@ -1,4 +1,4 @@
-
+using System;
 namespace Coins.Models
 {
   public class Coin
@@ -32,6 +32,20 @@ namespace Coins.Models
       }
 
       return dimes;
+    }
+
+    public static int GetNickels()
+    {
+      int nickels = 0;
+
+      while (Change >= 0.05)
+      {
+        Console.WriteLine(Change);
+        nickels++;
+        Change -= 0.05;
+      }
+
+      return nickels;
     }
   }
 }
