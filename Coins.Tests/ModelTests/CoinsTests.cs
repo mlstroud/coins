@@ -7,14 +7,26 @@ namespace Coins.Tests
   public class CoinTests
   {
     [TestMethod]
-    public void SetChange_SetsChange_Double()
+    public void Change_UpdatesChange_Double()
     {
       double change = 1.43;
-      Coin.SetChange(1.43);
+      Coin.Change = change;
 
       double result = Coin.Change;
 
       Assert.AreEqual(change, result);
+    }
+
+    [TestMethod]
+    public void GetQuarters_ReturnsNumberOfQuarters_Int()
+    {
+      double change = 0.97;
+      int quarters = 3;
+      Coin.Change = change;
+
+      int result = Coin.GetQuarters();
+
+      Assert.AreEqual(quarters, result);
     }
   }
 }
