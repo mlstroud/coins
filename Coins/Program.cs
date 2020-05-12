@@ -8,7 +8,7 @@ namespace Coins
     public static void Main()
     {
       PromptUser();
-      double change = GetChange();
+      decimal change = GetChange();
       Coin.MakeChange();
 
       Console.WriteLine(change + " can be broken down into " + Coin.Quarters + " quarters, " + Coin.Dimes + " dimes, " + Coin.Nickels + " nickels, and " + Coin.Pennies + " pennies.");
@@ -20,14 +20,14 @@ namespace Coins
       Console.WriteLine("-----------------------------------------------");
     }
 
-    public static double GetChange()
+    public static decimal GetChange()
     {
       bool parsed = false;
 
       while (!parsed)
       {
         string userInput = Console.ReadLine();
-        if (Double.TryParse(userInput, out double change))
+        if (decimal.TryParse(userInput, out decimal change))
         {
           Coin.Change = change;
           parsed = true;

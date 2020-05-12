@@ -3,7 +3,7 @@ namespace Coins.Models
 {
   public class Coin
   {
-    public static double Change { get; set; }
+    public static decimal Change { get; set; }
     public static int Quarters { get; set; }
     public static int Dimes { get; set; }
     public static int Nickels { get; set; }
@@ -21,10 +21,10 @@ namespace Coins.Models
     {
       int quarters = 0;
 
-      while (Change >= 0.25)
+      while (Change >= 0.25m)
       {
         quarters++;
-        Change -= 0.25;
+        Change -= 0.25m;
       }
 
       return quarters;
@@ -34,10 +34,10 @@ namespace Coins.Models
     {
       int dimes = 0;
 
-      while (Change >= 0.10)
+      while (Change >= 0.10m)
       {
         dimes++;
-        Change -= 0.1;
+        Change -= 0.1m;
       }
 
       return dimes;
@@ -47,10 +47,10 @@ namespace Coins.Models
     {
       int nickels = 0;
 
-      while (Change >= 0.05)
+      while (Change >= 0.05m)
       {
         nickels++;
-        Change -= 0.05;
+        Change -= 0.05m;
       }
 
       return nickels;
@@ -60,10 +60,10 @@ namespace Coins.Models
     {
       int pennies = 0;
 
-      while (Change >= 0.01)
+      while (Change >= 0.01m)
       {
         pennies++;
-        Change -= 0.01;
+        Change -= 0.01m;
       }
 
       return pennies;

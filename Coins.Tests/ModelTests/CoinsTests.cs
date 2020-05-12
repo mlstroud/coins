@@ -7,12 +7,12 @@ namespace Coins.Tests
   public class CoinTests
   {
     [TestMethod]
-    public void Change_UpdatesChange_Double()
+    public void Change_UpdatesChange_decimal()
     {
-      double change = 1.43;
+      decimal change = 1.43m;
       Coin.Change = change;
 
-      double result = Coin.Change;
+      decimal result = Coin.Change;
 
       Assert.AreEqual(change, result);
     }
@@ -20,7 +20,7 @@ namespace Coins.Tests
     [TestMethod]
     public void GetQuarters_ReturnsNumberOfQuarters_Int()
     {
-      double change = 0.97;
+      decimal change = 0.97m;
       int quarters = 3;
       Coin.Change = change;
 
@@ -32,7 +32,7 @@ namespace Coins.Tests
     [TestMethod]
     public void GetDimes_ReturnsNumberOfDimes_Int()
     {
-      double change = 0.20;
+      decimal change = 0.20m;
       Coin.Change = change;
       int dimes = 2;
 
@@ -44,9 +44,9 @@ namespace Coins.Tests
     [TestMethod]
     public void GetNickels_ReturnsNumberOfNickels_Int()
     {
-      double change = 0.20;
+      decimal change = 0.15m;
       Coin.Change = change;
-      int nickels = 4;
+      int nickels = 3;
 
       int result = Coin.GetNickels();
 
@@ -56,7 +56,7 @@ namespace Coins.Tests
     [TestMethod]
     public void GetPennies_ReturnsNumberOfPennies_Int()
     {
-      double change = 0.07;
+      decimal change = 0.07m;
       Coin.Change = change;
       int pennies = 7;
 
