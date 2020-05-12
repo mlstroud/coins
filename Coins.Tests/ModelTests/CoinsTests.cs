@@ -28,5 +28,17 @@ namespace Coins.Tests
 
       Assert.AreEqual(quarters, result);
     }
+
+    [TestMethod]
+    public void GetDimes_ReturnsNumberOfDimes_Int()
+    {
+      double change = 0.61;
+      Coin.Change = change;
+      int dimes = 1;
+
+      int result = Coin.GetDimes();
+
+      Assert.AreEqual(dimes, result);
+    }
   }
 }
