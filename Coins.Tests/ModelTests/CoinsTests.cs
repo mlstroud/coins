@@ -64,5 +64,23 @@ namespace Coins.Tests
 
       Assert.AreEqual(pennies, result);
     }
+
+    [TestMethod]
+    public void MakeChange_UpdatesCoinValues_Int()
+    {
+      decimal change = 0.91m;
+      Coin.Change = change;
+      int pennies = 1;
+      int nickels = 1;
+      int dimes = 1;
+      int quarters = 3;
+
+      Coin.MakeChange();
+
+      Assert.AreEqual(pennies, Coin.Pennies);
+      Assert.AreEqual(nickels, Coin.Nickels);
+      Assert.AreEqual(dimes, Coin.Dimes);
+      Assert.AreEqual(quarters, Coin.Quarters);
+    }
   }
 }
