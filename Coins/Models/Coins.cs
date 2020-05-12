@@ -9,9 +9,16 @@ namespace Coins.Models
     public static int Nickels { get; set; }
     public static int Pennies { get; set; }
 
-    public static void SetChange(double change)
+    public static int GetQuarters()
     {
-      Change = change;
+      int quarters = 0;
+      while (Change >= .25)
+      {
+        quarters++;
+        Change -= .25;
+      }
+
+      return quarters;
     }
   }
 }
