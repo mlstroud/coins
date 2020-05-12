@@ -52,5 +52,17 @@ namespace Coins.Tests
 
       Assert.AreEqual(nickels, result);
     }
+
+    [TestMethod]
+    public void GetPennies_ReturnsNumberOfPennies_Int()
+    {
+      double change = 0.6;
+      Coin.Change = change;
+      int pennies = 6;
+
+      int result = Coin.GetPennies();
+
+      Assert.AreEqual(pennies, result);
+    }
   }
 }
