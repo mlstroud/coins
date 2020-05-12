@@ -32,7 +32,7 @@ namespace Coins.Tests
     [TestMethod]
     public void GetDimes_ReturnsNumberOfDimes_Int()
     {
-      double change = 0.21;
+      double change = 0.20;
       Coin.Change = change;
       int dimes = 2;
 
@@ -44,9 +44,9 @@ namespace Coins.Tests
     [TestMethod]
     public void GetNickels_ReturnsNumberOfNickels_Int()
     {
-      double change = .15;
+      double change = 0.20;
       Coin.Change = change;
-      int nickels = 3;
+      int nickels = 4;
 
       int result = Coin.GetNickels();
 
