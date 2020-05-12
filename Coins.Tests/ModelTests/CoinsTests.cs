@@ -32,9 +32,9 @@ namespace Coins.Tests
     [TestMethod]
     public void GetDimes_ReturnsNumberOfDimes_Int()
     {
-      double change = 0.61;
+      double change = 0.21;
       Coin.Change = change;
-      int dimes = 1;
+      int dimes = 2;
 
       int result = Coin.GetDimes();
 

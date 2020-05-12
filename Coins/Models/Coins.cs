@@ -20,5 +20,18 @@ namespace Coins.Models
 
       return quarters;
     }
+
+    public static int GetDimes()
+    {
+      int dimes = 0;
+
+      while (Change >= .1)
+      {
+        dimes++;
+        Change -= .1;
+      }
+
+      return dimes;
+    }
   }
 }
