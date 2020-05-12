@@ -56,9 +56,9 @@ namespace Coins.Tests
     [TestMethod]
     public void GetPennies_ReturnsNumberOfPennies_Int()
     {
-      double change = 0.6;
+      double change = 0.07;
       Coin.Change = change;
-      int pennies = 6;
+      int pennies = 7;
 
       int result = Coin.GetPennies();
 
