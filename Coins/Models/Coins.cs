@@ -25,7 +25,7 @@ namespace Coins.Models
     {
       int dimes = 0;
 
-      while (Change >= .1)
+      while (Change >= .10)
       {
         dimes++;
         Change -= .1;
@@ -38,7 +38,7 @@ namespace Coins.Models
     {
       int nickels = 0;
 
-      while (Change >= 0.05)
+      while (Change >= 0.050)
       {
         Console.WriteLine(Change);
         nickels++;
@@ -46,6 +46,19 @@ namespace Coins.Models
       }
 
       return nickels;
+    }
+
+    public static int GetPennies()
+    {
+      int pennies = 0;
+
+      while (Change > 0)
+      {
+        pennies++;
+        Change -= 0.01;
+      }
+
+      return pennies;
     }
   }
 }
